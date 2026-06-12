@@ -11,7 +11,10 @@
         "x86_64-linux"
       ];
       forAllSystems = function: nixpkgs.lib.genAttrs systems (system:
-        function nixpkgs.legacyPackages.${system});
+        function (import nixpkgs {
+          inherit system;
+          config.allowUnfree = true;
+        }));
     in
       nixpkgs.lib.foldAttrs nixpkgs.lib.mergeAttrs {} (
         nixpkgs.lib.mapAttrsToList (_: v: v) (
