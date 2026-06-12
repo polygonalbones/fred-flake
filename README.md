@@ -11,8 +11,14 @@ inputs = {
   }
 }
 ```
+then you can add it to your systemPackages in your `/etc/nixos/configuration.nix`:
+```
+environment.systemPackages = with pkgs; [
+  fred.packages.${system}.default
+];
+```
 
-then you need to provide your own copy of the `fred-linux` binary (if you are an alpha tester in the discord, there is a pinned message with the link to the downloads) and run:
+Finally, you need to provide your own copy of the `fred-linux` binary (if you are an alpha tester in the discord, there is a pinned message with the link to the downloads) and run:
 ```
 nix store add --mode flat fred-linux
 ```
