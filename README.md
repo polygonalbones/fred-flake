@@ -3,7 +3,7 @@ Nix flake packing the fr(iendly) ed(itor)
 
 # Usage
 Add the flake to your system flake:
-```
+```nix
 inputs = {
   fred = {
     url = "github:polygonalbones/fred-flake";
@@ -12,7 +12,7 @@ inputs = {
 }
 ```
 then you can add it to your systemPackages in your `/etc/nixos/configuration.nix`:
-```
+```nix
 environment.systemPackages = with pkgs; [
   fred.packages.${system}.default
 ];
