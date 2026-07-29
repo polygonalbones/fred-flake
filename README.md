@@ -1,7 +1,7 @@
 # fred-flake
 Nix flake packing the fr(iendly) ed(itor)
 
-# Usage
+## Usage
 Add the flake to your system flake:
 ```nix
 inputs = {
@@ -23,3 +23,9 @@ Finally, you need to provide your own copy of the `fred-linux` binary (if you ar
 nix store add --mode flat fred-linux
 ```
 'fred-linux' is the path where your binary is. for me it is /home/polygonalbones/fred-linux
+
+## TODO
+* [ ] NixOS module
+  * [ ] Configure TOML files in `~/.config/fred` through Nix
+  * [ ] Declarative plugin management
+* [ ] Sandboxing with [nixpak](https://github.com/nixpak/nixpak) (plugin hardening)
