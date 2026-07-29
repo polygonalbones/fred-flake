@@ -13,12 +13,12 @@
 }:
 stdenv.mkDerivation (finalAttrs: {
   pname = "fred";
-  version = "0.28.0";
+  version = "0.29.0";
 
   src = requireFile {
     name = "fred-linux";
     url = "https://fred-dev.tech/";
-    hash = "sha256-jZLkHLqWAAOx2KYvQg0fi+s50QtPYcoaBaWaVoz4Fgo=";
+    hash = "sha256-0ILLd02V0wBafRUsSqGWiSY31ftiHm2x6QxWvV9jEYc=";
   };
 
   dontUnpack = true;
