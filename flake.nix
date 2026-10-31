@@ -1,9 +1,7 @@
 {
   description = "Nix flake packing the fr(iendly) ed(itor)";
 
-  inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-  };
+  inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
   outputs = inputs@{ self, nixpkgs }:
     let
